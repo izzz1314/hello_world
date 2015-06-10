@@ -1,0 +1,177 @@
+<div class="sidebar-menu toggle-others fixed">
+			
+			<div class="sidebar-menu-inner">	
+				
+				<header class="logo-env">
+					
+					<!-- logo -->
+					<div class="logo">
+						<a href="index.html" class="logo-expanded">
+							<img src="__PUBLIC__/images/logo@2x.png" width="80" alt="" />
+						</a>
+						
+						<a href="dashboard-1.html" class="logo-collapsed">
+							<img src="__PUBLIC__/images/logo-collapsed@2x.png" width="40" alt="" />
+						</a>
+					</div>
+					
+					<!-- This will toggle the mobile menu and will be visible only on mobile devices -->
+					<div class="mobile-menu-toggle visible-xs">
+						<a href="#" data-toggle="user-info-menu">
+							<i class="fa-bell-o"></i>
+							<span class="badge badge-success">7</span>
+						</a>
+						
+						<a href="#" data-toggle="mobile-menu">
+							<i class="fa-bars"></i>
+						</a>
+					</div>
+					
+					<!-- This will open the popup with user profile settings, you can use for any purpose, just be creative -->
+					<div class="settings-icon">
+						<a href="#" data-toggle="settings-pane" data-animate="true">
+							<i class="linecons-cog"></i>
+						</a>
+					</div>
+					
+								
+				</header>
+						
+				
+						
+				<ul id="main-menu" class="main-menu">
+					<!-- add class "multiple-expanded" to allow multiple submenus to open -->
+					<!-- class "auto-inherit-active-class" will automatically add "active" class for parent elements who are marked already with class "active" -->
+					<li <if condition="$rec eq 'index'"> class="active opened active" </if> >
+						<a href="#">
+							<i class="linecons-cog"></i>
+							<span class="title">运行状态</span>
+						</a>
+						<ul>
+							<li <if condition="$cul eq 'index'"> class="active" </if> >
+								<a href="/Home/Index/index">
+									<span class="title">简要状态</span>
+								</a>
+							</li>
+							<li <if condition="$cul eq 'xyjk'">class="active"</if> >
+								<a href="/Home/Index/xyjk">
+									<span class="title">网络协议监控</span>
+								</a>
+							</li>
+							
+						</ul>
+					</li>
+					
+					
+					<li <if condition="$rec eq 'hbmd' or $rec eq 'tuijian'"> class="active opened active" </if> >
+						<a href="#">
+							<i class="linecons-mail"></i>
+							<span class="title">黑白名单操作</span>
+							<!--<span class="label label-success pull-right">5</span>-->
+						</a>
+						<ul>
+							<li <if condition="$cul eq 'hmd'"> class="active" </if> >
+								<a href="/Home/Hbmd/hmd">
+									<span class="title">黑名单</span>
+								</a>
+							</li>
+							<li <if condition="$cul eq 'gsw'"> class="active" </if> >
+								<a href="/Home/hbmd/gsw">
+									<span class="title">高速网</span>
+								</a>
+							</li>
+							<li <if condition="$rec eq 'tuijian'"> class="active opened active" </if> >
+								<a href="#">
+									<span class="title">推荐</span>
+								</a>
+								<ul>
+									<li <if condition="$cul eq 'tjgsw'"> class="active" </if> >
+										<a href="/Home/hbmd/tjgsw">
+											<i class="entypo-flow-parallel"></i>
+											<span class="title">高速网</span>
+										</a>
+									</li>
+									<li <if condition="$cul eq 'tjhmd'"> class="active" </if> >
+										<a href="/Home/hbmd/tjhmd">
+											<i class="entypo-flow-parallel"></i>
+											<span class="title">黑名单</span>
+										</a>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</li>
+					<li <if condition="$rec eq 'yhcz'"> class="active opened active" </if> >
+						<a href="#">
+							<i class="linecons-user"></i>
+							<span class="title">用户操作</span>
+						</a>
+						<ul>
+							<li <if condition="$cul eq 'xjyh'"> class="active"</if> >
+								<a href="/Home/Yhcz/xjyh">
+									<span class="title">新建用户</span>
+								</a>
+							</li>
+							<li <if condition="$cul eq 'yhgl'"> class="active"</if> >
+								<a href="/Home/Yhcz/yhgl">
+									<span class="title">用户管理</span>
+								</a>
+							</li>
+							
+						</ul>
+					</li>
+					<li <if condition="$rec eq 'sjfx' or $rec eq 'shezhi'"> class="active opened" </if> >
+						<a href="#">
+							<i class="linecons-database"></i>
+							<span class="title">数据分析</span>
+						</a>
+						<ul>
+							<li <if condition="$rec eq 'shezhi'"> class="active opened" </if> >
+								<a href="#">
+									<span class="title">设置</span>
+								</a>
+						<ul>
+								
+							<li <if condition="$cul eq 'tjhmd'"> class="active" </if> >
+								<a href="/Home/Sjfx/tjjkzh">
+									<i class="entypo-flow-line"></i>
+									<span class="title">重点监控账号设置</span>
+								</a>
+							</li>
+							<li>
+								<a href="/Home/Sjfx/tjjkgjz">
+									<i class="entypo-flow-line"></i>
+									<span class="title">重点监控字段设置</span>
+								</a>
+							</li>
+						</ul>
+							</li>
+							
+							<li>
+								<a href="/Home/Sjfx/zhjk">
+									<span class="title">重点监控账号</span>
+								</a>
+							</li>
+							<li>
+								<a href="/Home/Sjfx/gjzjk">
+									<span class="title">重点监控字段</span>
+								</a>
+							</li>
+						</ul>
+					</li>
+					
+					<li <if condition="$rec eq 'xtrz'"> class="active opened active" </if> >
+						<a href="/Home/Xtrz">
+							<i class="linecons-globe"></i>
+							<span class="title">系统日志</span>
+						</a>
+					</li>
+					
+					
+					
+					
+				</ul>
+						
+			</div>
+			
+		</div>
